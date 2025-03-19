@@ -1,18 +1,12 @@
-import Cards from "./Day-2/Cards"
-import Day2 from "./Day-2/Day2"
-import "./Day-2/assets/style.css"
+import State1 from "./Day-3/State1"
+import State2 from "./Day-3/State2"
+
 function App() {
-  const details={
-    name:"Hari",
-    work:"IT Developer",
-    place:"Trichy"
-  }
+ 
  
   return (
     <>
-      {/* <Day2 a={details}/>      */}
-      {/* <Day2/>      */}
-      <Cards/>
+      <State2/>
     </>
   )
 }
