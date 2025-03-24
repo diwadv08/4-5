@@ -1,12 +1,12 @@
-import State1 from "./Day-3/State1"
-import State2 from "./Day-3/State2"
+
+import Effect1 from "./Day-4/Effect1"
 
 function App() {
  
  
   return (
     <>
-      <State2/>
+      <Effect1/>
     </>
   )
 }
