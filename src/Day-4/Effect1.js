@@ -1,27 +1,25 @@
 import React, { useEffect, useState } from 'react'
 
 function Effect1() {
-  let [a,setA]=useState(0);
-  let [a1,setA1]=useState([]);
+  const [a,setA]=useState(10);
+  const [b,setB]=useState(10);
   useEffect(()=>{
-    console.log(10);
-  },[a1])
-  let num=1;
-
-
-  function change(){
-    num+=1;
-    setA1((e)=>{
-      return [...e,num]
-    });
-  }
-
+    console.log("I am loaded");
+  },[])
+  useEffect(()=>{
+    console.log("A changed");
+  },[a])
+  useEffect(()=>{
+    console.log("B changed");
+  },[b])
   return (
     <div>
-        <button onClick={()=>{setA(a-=1)}}>-</button>
-        <span>{a}</span>
-        <button onClick={()=>{setA(a+=1)}}>+</button>
-        <button onClick={change}>Change</button>
+      <button onClick={()=>setB(b+1)}>{b}</button>
+      <br />
+      <br />
+      <button onClick={()=>{setA(a-1)}}>-</button>
+      {a}
+      <button onClick={()=>{setA(a+1)}}>+</button>
     </div>
   )
 }
