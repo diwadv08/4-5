@@ -1,5 +1,7 @@
 // import ConditionRender1 from "./Day-5/ConditionRender1"
 
+import Ref2 from "./Day-7/Ref2"
+
 import Components1 from "./Day-6/Components1"
 
 // import Card11 from "./Day-5/Card11"
@@ -10,6 +12,7 @@ function App() {
     <>
       {/* <Effect2/> */}
       {/* <ConditionRender1/> */}
+      {/* <Ref2/> */}
       {/* <Card11/> */}
       <Components1/>
     </>
