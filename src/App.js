@@ -1,28 +1,26 @@
-// import ConditionRender1 from "./Day-5/ConditionRender1"
-
-import Ref2 from "./Day-7/Ref2"
-
-import Components1 from "./Day-6/Components1"
-import A from "./Day-8/A"
-import B from "./Day-8/B"
-import Reducers1 from "./Day-8/Reducers1"
-
-// import Card11 from "./Day-5/Card11"
-
-// import Effect2 from "./Day-5/Effect2"
+import React from 'react'
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Home from './pages/Home';
+import About from './pages/About';
+import Welcome from './pages/Welcome';
+import Contact from './pages/Contact';
+import Error from './pages/Error';
+import Header from './component/Header';
+import Product from './pages/Product';
 function App() {
   return (
-    <>
-      {/* <Effect2/> */}
-      {/* <ConditionRender1/> */}
-      {/* <Ref2/> */}
-      {/* <Card11/> */}
-      {/* <Components1/> */}
-        {/* <A/>
-        <B/> */}
-        <Reducers1/>
-    </>
+    <BrowserRouter>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/home" element={<Home/>}></Route>
+        <Route path="/welcome/:user_name" element={<Welcome/>}></Route>
+        <Route path="/product/:id" element={<Product/>}></Route>
+        <Route path='/about' element={<About/>}></Route>
+        <Route path='/contact' element={<Contact/>}></Route>
+        <Route path='*' element={<Error/>}></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
-
 export default App
