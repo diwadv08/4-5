@@ -7,10 +7,11 @@ import Contact from './pages/Contact';
 import Error from './pages/Error';
 import Header from './component/Header';
 import Product from './pages/Product';
+import AddProductForm from './component/AddProductForm';
 function App() {
   return (
     <BrowserRouter>
-      <Header/>
+      <Header/>     
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/home" element={<Home/>}></Route>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/product/:id" element={<Product/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
+        <Route path='/add_product' element={<AddProductForm/>}></Route>
         <Route path='*' element={<Error/>}></Route>
       </Routes>
     </BrowserRouter>

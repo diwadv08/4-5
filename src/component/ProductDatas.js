@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { cart_content } from '../assets/jsondata'
+import React, { useContext, useState } from 'react'
 import {Link} from "react-router-dom";
+import { ProductContext } from '../context/ContextFun';
 function ProductDatas() {
-  let [mapValue,setMapValue]=useState(cart_content);
+  let {mapValue,setMapValue}=useContext(ProductContext);
   let deleteFun=(id)=>{
       let j=mapValue.filter((data)=>{
         return data.id!=id;
